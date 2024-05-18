@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'data_provider.dart';
+import '../provider/data_provider.dart';
 import 'first_screen.dart';
 
 class FourthScreen extends StatelessWidget{
@@ -30,9 +30,11 @@ class FourthScreen extends StatelessWidget{
                   ),
                   controller: _controller,
                   maxLength: 1,
-                  onChanged: (value){
+                  onChanged: (value)async{
                     LengthLimitingTextInputFormatter(1);
                     dataProvider.updateData("$data$value");
+                    await dataProvider.insertDB({"word": "$data$value"});
+                    // if(!mount)return;
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context)=>const FirstScreen())
                     );
@@ -57,4 +59,6 @@ class FourthScreen extends StatelessWidget{
     );
 
   }
+
+
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'data_provider.dart';
+import '../provider/data_provider.dart';
 import 'fourth_screen.dart';
 
 

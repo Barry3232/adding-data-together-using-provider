@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:word_grappler_using_provider/second_screen.dart';
-import 'data_provider.dart';
+import 'package:word_grappler_using_provider/screens/second_screen.dart';
+import '../provider/data_provider.dart';
+import 'record_screen.dart';
 
 
 class FirstScreen extends StatelessWidget{
@@ -40,6 +41,14 @@ class FirstScreen extends StatelessWidget{
                   );
                 },
                 child: const Text('Go to next Screen')
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context)=>const RecordScreen())
+                  );
+                },
+                child: const Text('Records')
             ),
           ],
         ),

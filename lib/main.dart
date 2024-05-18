@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:word_grappler_using_provider/data_provider.dart';
-import 'package:word_grappler_using_provider/first_screen.dart';
+import 'package:word_grappler_using_provider/provider/data_provider.dart';
+import 'package:word_grappler_using_provider/screens/first_screen.dart';
 
 
 void main() {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:word_grappler_using_provider/third_screen.dart';
-import 'data_provider.dart';
+import 'package:word_grappler_using_provider/screens/third_screen.dart';
+import '../provider/data_provider.dart';
 
 class SecondScreen extends StatelessWidget{
   SecondScreen({super.key});
